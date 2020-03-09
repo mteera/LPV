@@ -9,17 +9,18 @@
 import UIKit
 import Alamofire
 
-public class LPVLoginViewController: UIViewController {
+
+
+public class LPVLoginViewController: UIViewController, PrimaryContentViewControllerDelegate {
     
     /// The current content view controller (shown behind the drawer).
-    public fileprivate(set) var LPVViewController: UIViewController!
-    
-    
+    public fileprivate(set) var initialVC: UIViewController!
+
     required public init(viewController: UIViewController) {
         super.init(nibName: nil, bundle: nil)
         
         ({
-            self.LPVViewController = viewController
+            self.initialVC = viewController
         })()
     }
     
@@ -91,12 +92,7 @@ public class LPVLoginViewController: UIViewController {
     @objc func handleLogin(_ sender: UIButton) {
         
         guard let email = emailFieldWithLabel.textField.text, let password = passwordFieldWithLabel.textField.text else { return }
-        
-//        Service.shared.postAction { (error) in
-//            if let error = error {
-//                return
-//            }
-//        }
+
         Service.shared.signIn(email: email, password: password) { (error) in
 
 
@@ -110,9 +106,9 @@ public class LPVLoginViewController: UIViewController {
             return
             }
 
-
             let primaryVC = PrimaryContentViewController()
-            primaryVC.vc = self.LPVViewController
+            primaryVC.delegate = self
+            primaryVC.initialVC = self.initialVC
             let vc = ProductViewController(contentViewController: primaryVC, drawerViewController: DrawerViewController())
             vc.modalPresentationStyle = .overFullScreen
             vc.modalTransitionStyle = .crossDissolve
@@ -124,6 +120,13 @@ public class LPVLoginViewController: UIViewController {
         
 
         
+    }
+    
+    
+    func didDismiss() {
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
 }

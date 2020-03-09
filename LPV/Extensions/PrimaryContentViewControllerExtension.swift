@@ -104,8 +104,15 @@ extension PrimaryContentViewController {
     }
     
     @objc func handleClose(_ sender: UIButton) {
+        
+        delegate?.didDismiss()
+        let vc = self.initialVC
+        self.dismiss(animated: false, completion: {
+            UIApplication.shared.windows.first?.rootViewController = vc
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        })
 
-        self.dismiss(animated: true, completion: nil)
+
     }
     
     
