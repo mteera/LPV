@@ -8,7 +8,6 @@
 
 import Foundation
 
-// Structs over Class as this is a basic data object and does not require the use of inheritance.
 
 public class Product: Decodable {
     let id: String

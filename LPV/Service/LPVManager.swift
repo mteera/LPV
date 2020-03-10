@@ -10,7 +10,7 @@ import Foundation
 
 public class LPVManager {
 
-    static let shared = LPVManager()
+    public static let shared = LPVManager()
 
     public var onSelected: ((_ product: Product) -> ())?
 
