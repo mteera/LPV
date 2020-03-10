@@ -12,6 +12,6 @@ public class Attributes: Decodable {
     let title: String
     let description: String?
     let price: Int?
-    let image: String?
+    public let image: String?
 
 }

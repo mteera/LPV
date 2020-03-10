@@ -12,7 +12,7 @@ import Foundation
 public class Product: Decodable {
     let id: String
     let type: String
-    let attributes: Attributes
+    public let attributes: Attributes
 
 }
 
