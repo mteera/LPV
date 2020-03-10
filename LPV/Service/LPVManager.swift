@@ -12,6 +12,6 @@ public class LPVManager {
 
     public static let shared = LPVManager()
 
-    public var onSelected: ((_ product: Product) -> ())?
+    public var onSelected: ((_ product: LPVProduct) -> ())?
 
 }

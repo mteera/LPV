@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Attributes: Decodable {
+public class LPVAttributes: Decodable {
     let title: String
     let description: String?
     let price: Int?

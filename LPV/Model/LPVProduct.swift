@@ -9,10 +9,10 @@
 import Foundation
 
 
-public class Product: Decodable {
+public class LPVProduct: Decodable {
     let id: String
     let type: String
-    public let attributes: Attributes
+    public let attributes: LPVAttributes
 
 }
 

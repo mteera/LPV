@@ -13,10 +13,10 @@
 		B5FBC80D24182C2F00C8928E /* LPVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7F524182C2D00C8928E /* LPVManager.swift */; };
 		B5FBC80E24182C3000C8928E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7F624182C2D00C8928E /* Service.swift */; };
 		B5FBC80F24182C3000C8928E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7F724182C2D00C8928E /* NetworkService.swift */; };
-		B5FBC81024182C3000C8928E /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7F924182C2D00C8928E /* Attributes.swift */; };
+		B5FBC81024182C3000C8928E /* LPVAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7F924182C2D00C8928E /* LPVAttributes.swift */; };
 		B5FBC81124182C3000C8928E /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7FA24182C2D00C8928E /* ProductData.swift */; };
 		B5FBC81224182C3000C8928E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7FB24182C2D00C8928E /* User.swift */; };
-		B5FBC81324182C3000C8928E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7FC24182C2E00C8928E /* Product.swift */; };
+		B5FBC81324182C3000C8928E /* LPVProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7FC24182C2E00C8928E /* LPVProduct.swift */; };
 		B5FBC81424182C3000C8928E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7FE24182C2E00C8928E /* ProductDetailViewController.swift */; };
 		B5FBC81524182C3000C8928E /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7FF24182C2E00C8928E /* ProductViewController.swift */; };
 		B5FBC81624182C3000C8928E /* LPVLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC80024182C2E00C8928E /* LPVLoginViewController.swift */; };
@@ -39,10 +39,10 @@
 		B5FBC7F524182C2D00C8928E /* LPVManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPVManager.swift; sourceTree = "<group>"; };
 		B5FBC7F624182C2D00C8928E /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B5FBC7F724182C2D00C8928E /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		B5FBC7F924182C2D00C8928E /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
+		B5FBC7F924182C2D00C8928E /* LPVAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPVAttributes.swift; sourceTree = "<group>"; };
 		B5FBC7FA24182C2D00C8928E /* ProductData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
 		B5FBC7FB24182C2D00C8928E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B5FBC7FC24182C2E00C8928E /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		B5FBC7FC24182C2E00C8928E /* LPVProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPVProduct.swift; sourceTree = "<group>"; };
 		B5FBC7FE24182C2E00C8928E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		B5FBC7FF24182C2E00C8928E /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		B5FBC80024182C2E00C8928E /* LPVLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPVLoginViewController.swift; sourceTree = "<group>"; };
@@ -144,10 +144,10 @@
 		B5FBC7F824182C2D00C8928E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B5FBC7F924182C2D00C8928E /* Attributes.swift */,
+				B5FBC7F924182C2D00C8928E /* LPVAttributes.swift */,
 				B5FBC7FA24182C2D00C8928E /* ProductData.swift */,
 				B5FBC7FB24182C2D00C8928E /* User.swift */,
-				B5FBC7FC24182C2E00C8928E /* Product.swift */,
+				B5FBC7FC24182C2E00C8928E /* LPVProduct.swift */,
 			);
 			name = Model;
 			path = LPV/Model;
@@ -310,7 +310,7 @@
 				B5FBC81724182C3000C8928E /* DrawerViewContoller.swift in Sources */,
 				B5FBC80F24182C3000C8928E /* NetworkService.swift in Sources */,
 				B5FBC81C24182C3000C8928E /* DrawerViewControllerExtension.swift in Sources */,
-				B5FBC81024182C3000C8928E /* Attributes.swift in Sources */,
+				B5FBC81024182C3000C8928E /* LPVAttributes.swift in Sources */,
 				B5FBC81E24182C3000C8928E /* LPVLoginViewControllerExtension.swift in Sources */,
 				B5FBC81424182C3000C8928E /* ProductDetailViewController.swift in Sources */,
 				B5FBC81524182C3000C8928E /* ProductViewController.swift in Sources */,
@@ -318,7 +318,7 @@
 				B5FBC80E24182C3000C8928E /* Service.swift in Sources */,
 				B5FBC81D24182C3000C8928E /* PrimaryContentViewControllerExtension.swift in Sources */,
 				B5FBC81B24182C3000C8928E /* ProductCell.swift in Sources */,
-				B5FBC81324182C3000C8928E /* Product.swift in Sources */,
+				B5FBC81324182C3000C8928E /* LPVProduct.swift in Sources */,
 				B5FBC81824182C3000C8928E /* PrimaryContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

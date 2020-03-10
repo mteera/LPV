@@ -14,7 +14,7 @@ class Service {
     
     static let shared = Service()
     
-    var products = [Product]()
+    var products = [LPVProduct]()
     
     
     // declare my generic json function here

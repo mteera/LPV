@@ -9,5 +9,5 @@
 import Foundation
 
 struct ProductData: Decodable {
-    let data: [Product]
+    let data: [LPVProduct]
 }

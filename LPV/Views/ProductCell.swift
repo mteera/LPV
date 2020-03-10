@@ -12,7 +12,7 @@ import Kingfisher
 class ProductCell: UITableViewCell {
     
     
-    var product: Product? {
+    var product: LPVProduct? {
         didSet {
             guard let product = product else { return }
             

@@ -47,7 +47,7 @@ public class DrawerViewController: UIViewController {
         }
     }
     
-    var products = [Product]()
+    var products = [LPVProduct]()
 
     
     public override func viewDidLoad() {

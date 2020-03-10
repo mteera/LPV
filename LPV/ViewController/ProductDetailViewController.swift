@@ -12,7 +12,7 @@ import Kingfisher
 
 class ProductDetailViewController: UIViewController {
 
-    var product: Product? {
+    var product: LPVProduct? {
         didSet {
             guard let product = product else { return }
             if let image = product.attributes.image {
