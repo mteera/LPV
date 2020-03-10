@@ -11,16 +11,18 @@ import Alamofire
 
 
 
-public class LPVLoginViewController: UIViewController, PrimaryContentViewControllerDelegate {
+public class LPVLoginViewController: UIViewController {
     
     /// The current content view controller (shown behind the drawer).
     public fileprivate(set) var initialVC: UIViewController!
+    public fileprivate(set) var productDetailVC: UIViewController!
 
-    required public init(viewController: UIViewController) {
+    required public init(initialViewController: UIViewController, productDetailViewController: UIViewController) {
         super.init(nibName: nil, bundle: nil)
         
         ({
-            self.initialVC = viewController
+            self.initialVC = initialViewController
+            self.productDetailVC = productDetailViewController
         })()
     }
     
@@ -57,45 +59,18 @@ public class LPVLoginViewController: UIViewController, PrimaryContentViewControl
         super.viewDidLoad()
         view.backgroundColor = .white
         overrideUserInterfaceStyle = .light
+        setupViews()
 
-        emailFieldWithLabel.titleLabel.text = "Email"
-        emailFieldWithLabel.textField.placeholder = "someone@example.com"
-        emailFieldWithLabel.textField.text = "​candidate@geddit.com"
-
-        passwordFieldWithLabel.titleLabel.text = "Password"
-        passwordFieldWithLabel.textField.text = "becoolatgeddit"
-        passwordFieldWithLabel.textField.isSecureTextEntry = true
-
-        
-        let stackView = UIStackView(arrangedSubviews: [emailFieldWithLabel, passwordFieldWithLabel, loginButton])
-        stackView.spacing = 40
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually
-        stackView.alignment = .fill
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-
-        
-        loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-
-        
-        
-        view.addSubview(stackView)
-        stackView.anchor(view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 40, leftConstant: 32, bottomConstant: 0, rightConstant: 32)
-        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-
-        loginButton.addTarget(self, action: #selector(handleLogin(_:)), for: .touchUpInside)
         
 
         // Do any additional setup after loading the view.
     }
-    
+
     @objc func handleLogin(_ sender: UIButton) {
         
         guard let email = emailFieldWithLabel.textField.text, let password = passwordFieldWithLabel.textField.text else { return }
-
-        Service.shared.signIn(email: email, password: password) { (error) in
-
-
+        
+        NetworkService.shared.signIn(email: email, password: password) { (error) in
             if let error = error {
 
             let alertController = UIAlertController(title: error.localizedDescription, message: "Email or password is incorrect", preferredStyle: .alert)
@@ -105,29 +80,39 @@ public class LPVLoginViewController: UIViewController, PrimaryContentViewControl
 
             return
             }
-
+            
             let primaryVC = PrimaryContentViewController()
-            primaryVC.delegate = self
             primaryVC.initialVC = self.initialVC
-            let vc = ProductViewController(contentViewController: primaryVC, drawerViewController: DrawerViewController())
-            vc.modalPresentationStyle = .overFullScreen
-            vc.modalTransitionStyle = .crossDissolve
-            self.present(vc, animated: true, completion: nil)
+            let drawerVC = DrawerViewController()
+            drawerVC.productDetailVC = self.productDetailVC
 
+            guard let window = UIApplication.shared.keyWindow else {
+                return
+            }
+
+            let vc = ProductViewController(contentViewController: primaryVC, drawerViewController: drawerVC)
+            // Set the new rootViewController of the window.
+            // Calling "UIView.transition" below will animate the swap.
+            window.rootViewController = vc
+
+            // A mask of options indicating how you want to perform the animations.
+            let options: UIView.AnimationOptions = .transitionCrossDissolve
+
+            // The duration of the transition animation, measured in seconds.
+            let duration: TimeInterval = 0.3
+
+            // Creates a transition animation.
+            // Though `animations` is optional, the documentation tells us that it must not be nil. ¯\_(ツ)_/¯
+            UIView.transition(with: window, duration: duration, options: options, animations: {}, completion:
+            { completed in
+                
+                // maybe do something on completion here
+            })
 
         }
-        
-        
+    }
+    
 
-        
-    }
-    
-    
-    func didDismiss() {
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            self.dismiss(animated: true, completion: nil)
-        }
-    }
     
 }
 

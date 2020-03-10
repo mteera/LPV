@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		B1018403C1EA5495ABA5AC17 /* Pods_LPV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9035400DD1E59896BE0745AC /* Pods_LPV.framework */; };
 		B5BAB3432416624500344849 /* LPV.h in Headers */ = {isa = PBXBuildFile; fileRef = B5BAB3412416624500344849 /* LPV.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5BAB3892416628000344849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5BAB3742416628000344849 /* Assets.xcassets */; };
-		B5BAB38A2416628000344849 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB3762416628000344849 /* UIView+Anchors.swift */; };
-		B5BAB38B2416628000344849 /* TextFieldWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB3772416628000344849 /* TextFieldWithLabel.swift */; };
-		B5BAB38C2416628000344849 /* PrimaryContentViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB3792416628000344849 /* PrimaryContentViewControllerExtension.swift */; };
-		B5BAB38D2416628000344849 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB37B2416628000344849 /* ProductDetailViewController.swift */; };
-		B5BAB38E2416628000344849 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB37C2416628000344849 /* ProductViewController.swift */; };
-		B5BAB38F2416628000344849 /* LPVLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB37D2416628000344849 /* LPVLoginViewController.swift */; };
-		B5BAB3902416628000344849 /* DrawerViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB37E2416628000344849 /* DrawerViewContoller.swift */; };
-		B5BAB3912416628000344849 /* PrimaryContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB37F2416628000344849 /* PrimaryContentViewController.swift */; };
-		B5BAB3922416628000344849 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB3812416628000344849 /* Attributes.swift */; };
-		B5BAB3932416628000344849 /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB3822416628000344849 /* ProductData.swift */; };
-		B5BAB3942416628000344849 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB3832416628000344849 /* User.swift */; };
-		B5BAB3952416628000344849 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB3842416628000344849 /* Product.swift */; };
-		B5BAB3962416628000344849 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB3862416628000344849 /* Service.swift */; };
-		B5BAB3972416628000344849 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB3882416628000344849 /* ProductCell.swift */; };
+		B5FBC80C24182C2F00C8928E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5FBC7F324182C2D00C8928E /* Assets.xcassets */; };
+		B5FBC80D24182C2F00C8928E /* LPVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7F524182C2D00C8928E /* LPVManager.swift */; };
+		B5FBC80E24182C3000C8928E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7F624182C2D00C8928E /* Service.swift */; };
+		B5FBC80F24182C3000C8928E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7F724182C2D00C8928E /* NetworkService.swift */; };
+		B5FBC81024182C3000C8928E /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7F924182C2D00C8928E /* Attributes.swift */; };
+		B5FBC81124182C3000C8928E /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7FA24182C2D00C8928E /* ProductData.swift */; };
+		B5FBC81224182C3000C8928E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7FB24182C2D00C8928E /* User.swift */; };
+		B5FBC81324182C3000C8928E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7FC24182C2E00C8928E /* Product.swift */; };
+		B5FBC81424182C3000C8928E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7FE24182C2E00C8928E /* ProductDetailViewController.swift */; };
+		B5FBC81524182C3000C8928E /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC7FF24182C2E00C8928E /* ProductViewController.swift */; };
+		B5FBC81624182C3000C8928E /* LPVLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC80024182C2E00C8928E /* LPVLoginViewController.swift */; };
+		B5FBC81724182C3000C8928E /* DrawerViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC80124182C2E00C8928E /* DrawerViewContoller.swift */; };
+		B5FBC81824182C3000C8928E /* PrimaryContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC80224182C2E00C8928E /* PrimaryContentViewController.swift */; };
+		B5FBC81924182C3000C8928E /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC80424182C2E00C8928E /* UIView+Anchors.swift */; };
+		B5FBC81A24182C3000C8928E /* TextFieldWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC80524182C2E00C8928E /* TextFieldWithLabel.swift */; };
+		B5FBC81B24182C3000C8928E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC80724182C2F00C8928E /* ProductCell.swift */; };
+		B5FBC81C24182C3000C8928E /* DrawerViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC80924182C2F00C8928E /* DrawerViewControllerExtension.swift */; };
+		B5FBC81D24182C3000C8928E /* PrimaryContentViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC80A24182C2F00C8928E /* PrimaryContentViewControllerExtension.swift */; };
+		B5FBC81E24182C3000C8928E /* LPVLoginViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC80B24182C2F00C8928E /* LPVLoginViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,21 +35,25 @@
 		B5BAB33E2416624500344849 /* LPV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LPV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BAB3412416624500344849 /* LPV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPV.h; sourceTree = "<group>"; };
 		B5BAB3422416624500344849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5BAB3742416628000344849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B5BAB3762416628000344849 /* UIView+Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
-		B5BAB3772416628000344849 /* TextFieldWithLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldWithLabel.swift; sourceTree = "<group>"; };
-		B5BAB3792416628000344849 /* PrimaryContentViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryContentViewControllerExtension.swift; sourceTree = "<group>"; };
-		B5BAB37B2416628000344849 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
-		B5BAB37C2416628000344849 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
-		B5BAB37D2416628000344849 /* LPVLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPVLoginViewController.swift; sourceTree = "<group>"; };
-		B5BAB37E2416628000344849 /* DrawerViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewContoller.swift; sourceTree = "<group>"; };
-		B5BAB37F2416628000344849 /* PrimaryContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryContentViewController.swift; sourceTree = "<group>"; };
-		B5BAB3812416628000344849 /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
-		B5BAB3822416628000344849 /* ProductData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
-		B5BAB3832416628000344849 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B5BAB3842416628000344849 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		B5BAB3862416628000344849 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		B5BAB3882416628000344849 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		B5FBC7F324182C2D00C8928E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5FBC7F524182C2D00C8928E /* LPVManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPVManager.swift; sourceTree = "<group>"; };
+		B5FBC7F624182C2D00C8928E /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		B5FBC7F724182C2D00C8928E /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B5FBC7F924182C2D00C8928E /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
+		B5FBC7FA24182C2D00C8928E /* ProductData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
+		B5FBC7FB24182C2D00C8928E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B5FBC7FC24182C2E00C8928E /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		B5FBC7FE24182C2E00C8928E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		B5FBC7FF24182C2E00C8928E /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		B5FBC80024182C2E00C8928E /* LPVLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPVLoginViewController.swift; sourceTree = "<group>"; };
+		B5FBC80124182C2E00C8928E /* DrawerViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewContoller.swift; sourceTree = "<group>"; };
+		B5FBC80224182C2E00C8928E /* PrimaryContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryContentViewController.swift; sourceTree = "<group>"; };
+		B5FBC80424182C2E00C8928E /* UIView+Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
+		B5FBC80524182C2E00C8928E /* TextFieldWithLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldWithLabel.swift; sourceTree = "<group>"; };
+		B5FBC80724182C2F00C8928E /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		B5FBC80924182C2F00C8928E /* DrawerViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewControllerExtension.swift; sourceTree = "<group>"; };
+		B5FBC80A24182C2F00C8928E /* PrimaryContentViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryContentViewControllerExtension.swift; sourceTree = "<group>"; };
+		B5FBC80B24182C2F00C8928E /* LPVLoginViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPVLoginViewControllerExtension.swift; sourceTree = "<group>"; };
 		C4CA1A13A312151602A038C9 /* Pods-LPV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPV.debug.xcconfig"; path = "Target Support Files/Pods-LPV/Pods-LPV.debug.xcconfig"; sourceTree = "<group>"; };
 		CF3D1FDA9FDDD34F186DD497 /* Pods-LPV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPV.release.xcconfig"; path = "Target Support Files/Pods-LPV/Pods-LPV.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,20 +84,19 @@
 				C4CA1A13A312151602A038C9 /* Pods-LPV.debug.xcconfig */,
 				CF3D1FDA9FDDD34F186DD497 /* Pods-LPV.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		B5BAB3342416624500344849 = {
 			isa = PBXGroup;
 			children = (
-				B5BAB3782416628000344849 /* Extensions */,
-				B5BAB3752416628000344849 /* Helpers */,
-				B5BAB3802416628000344849 /* Model */,
-				B5BAB3732416628000344849 /* Resources */,
-				B5BAB3852416628000344849 /* Service */,
-				B5BAB37A2416628000344849 /* ViewController */,
-				B5BAB3872416628000344849 /* Views */,
+				B5FBC80824182C2F00C8928E /* Extensions */,
+				B5FBC80324182C2E00C8928E /* Helpers */,
+				B5FBC7F824182C2D00C8928E /* Model */,
+				B5FBC7F224182C2D00C8928E /* Resources */,
+				B5FBC7F424182C2D00C8928E /* Service */,
+				B5FBC7FD24182C2E00C8928E /* ViewController */,
+				B5FBC80624182C2F00C8928E /* Views */,
 				B5BAB3402416624500344849 /* LPV */,
 				B5BAB33F2416624500344849 /* Products */,
 				5D62D4641BB641FD5B3B76D6 /* Pods */,
@@ -114,75 +121,79 @@
 			path = LPV;
 			sourceTree = "<group>";
 		};
-		B5BAB3732416628000344849 /* Resources */ = {
+		B5FBC7F224182C2D00C8928E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B5BAB3742416628000344849 /* Assets.xcassets */,
+				B5FBC7F324182C2D00C8928E /* Assets.xcassets */,
 			);
 			name = Resources;
 			path = LPV/Resources;
 			sourceTree = "<group>";
 		};
-		B5BAB3752416628000344849 /* Helpers */ = {
+		B5FBC7F424182C2D00C8928E /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				B5BAB3762416628000344849 /* UIView+Anchors.swift */,
-				B5BAB3772416628000344849 /* TextFieldWithLabel.swift */,
-			);
-			name = Helpers;
-			path = LPV/Helpers;
-			sourceTree = "<group>";
-		};
-		B5BAB3782416628000344849 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B5BAB3792416628000344849 /* PrimaryContentViewControllerExtension.swift */,
-			);
-			name = Extensions;
-			path = LPV/Extensions;
-			sourceTree = "<group>";
-		};
-		B5BAB37A2416628000344849 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				B5BAB37B2416628000344849 /* ProductDetailViewController.swift */,
-				B5BAB37C2416628000344849 /* ProductViewController.swift */,
-				B5BAB37D2416628000344849 /* LPVLoginViewController.swift */,
-				B5BAB37E2416628000344849 /* DrawerViewContoller.swift */,
-				B5BAB37F2416628000344849 /* PrimaryContentViewController.swift */,
-			);
-			name = ViewController;
-			path = LPV/ViewController;
-			sourceTree = "<group>";
-		};
-		B5BAB3802416628000344849 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B5BAB3812416628000344849 /* Attributes.swift */,
-				B5BAB3822416628000344849 /* ProductData.swift */,
-				B5BAB3832416628000344849 /* User.swift */,
-				B5BAB3842416628000344849 /* Product.swift */,
-			);
-			name = Model;
-			path = LPV/Model;
-			sourceTree = "<group>";
-		};
-		B5BAB3852416628000344849 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				B5BAB3862416628000344849 /* Service.swift */,
+				B5FBC7F524182C2D00C8928E /* LPVManager.swift */,
+				B5FBC7F624182C2D00C8928E /* Service.swift */,
+				B5FBC7F724182C2D00C8928E /* NetworkService.swift */,
 			);
 			name = Service;
 			path = LPV/Service;
 			sourceTree = "<group>";
 		};
-		B5BAB3872416628000344849 /* Views */ = {
+		B5FBC7F824182C2D00C8928E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B5BAB3882416628000344849 /* ProductCell.swift */,
+				B5FBC7F924182C2D00C8928E /* Attributes.swift */,
+				B5FBC7FA24182C2D00C8928E /* ProductData.swift */,
+				B5FBC7FB24182C2D00C8928E /* User.swift */,
+				B5FBC7FC24182C2E00C8928E /* Product.swift */,
+			);
+			name = Model;
+			path = LPV/Model;
+			sourceTree = "<group>";
+		};
+		B5FBC7FD24182C2E00C8928E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B5FBC7FE24182C2E00C8928E /* ProductDetailViewController.swift */,
+				B5FBC7FF24182C2E00C8928E /* ProductViewController.swift */,
+				B5FBC80024182C2E00C8928E /* LPVLoginViewController.swift */,
+				B5FBC80124182C2E00C8928E /* DrawerViewContoller.swift */,
+				B5FBC80224182C2E00C8928E /* PrimaryContentViewController.swift */,
+			);
+			name = ViewController;
+			path = LPV/ViewController;
+			sourceTree = "<group>";
+		};
+		B5FBC80324182C2E00C8928E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B5FBC80424182C2E00C8928E /* UIView+Anchors.swift */,
+				B5FBC80524182C2E00C8928E /* TextFieldWithLabel.swift */,
+			);
+			name = Helpers;
+			path = LPV/Helpers;
+			sourceTree = "<group>";
+		};
+		B5FBC80624182C2F00C8928E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5FBC80724182C2F00C8928E /* ProductCell.swift */,
 			);
 			name = Views;
 			path = LPV/Views;
+			sourceTree = "<group>";
+		};
+		B5FBC80824182C2F00C8928E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B5FBC80924182C2F00C8928E /* DrawerViewControllerExtension.swift */,
+				B5FBC80A24182C2F00C8928E /* PrimaryContentViewControllerExtension.swift */,
+				B5FBC80B24182C2F00C8928E /* LPVLoginViewControllerExtension.swift */,
+			);
+			name = Extensions;
+			path = LPV/Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5BAB3892416628000344849 /* Assets.xcassets in Resources */,
+				B5FBC80C24182C2F00C8928E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,20 +302,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5BAB3922416628000344849 /* Attributes.swift in Sources */,
-				B5BAB3912416628000344849 /* PrimaryContentViewController.swift in Sources */,
-				B5BAB3942416628000344849 /* User.swift in Sources */,
-				B5BAB3972416628000344849 /* ProductCell.swift in Sources */,
-				B5BAB3962416628000344849 /* Service.swift in Sources */,
-				B5BAB38A2416628000344849 /* UIView+Anchors.swift in Sources */,
-				B5BAB38B2416628000344849 /* TextFieldWithLabel.swift in Sources */,
-				B5BAB38D2416628000344849 /* ProductDetailViewController.swift in Sources */,
-				B5BAB38C2416628000344849 /* PrimaryContentViewControllerExtension.swift in Sources */,
-				B5BAB38E2416628000344849 /* ProductViewController.swift in Sources */,
-				B5BAB3902416628000344849 /* DrawerViewContoller.swift in Sources */,
-				B5BAB38F2416628000344849 /* LPVLoginViewController.swift in Sources */,
-				B5BAB3932416628000344849 /* ProductData.swift in Sources */,
-				B5BAB3952416628000344849 /* Product.swift in Sources */,
+				B5FBC80D24182C2F00C8928E /* LPVManager.swift in Sources */,
+				B5FBC81124182C3000C8928E /* ProductData.swift in Sources */,
+				B5FBC81A24182C3000C8928E /* TextFieldWithLabel.swift in Sources */,
+				B5FBC81924182C3000C8928E /* UIView+Anchors.swift in Sources */,
+				B5FBC81224182C3000C8928E /* User.swift in Sources */,
+				B5FBC81724182C3000C8928E /* DrawerViewContoller.swift in Sources */,
+				B5FBC80F24182C3000C8928E /* NetworkService.swift in Sources */,
+				B5FBC81C24182C3000C8928E /* DrawerViewControllerExtension.swift in Sources */,
+				B5FBC81024182C3000C8928E /* Attributes.swift in Sources */,
+				B5FBC81E24182C3000C8928E /* LPVLoginViewControllerExtension.swift in Sources */,
+				B5FBC81424182C3000C8928E /* ProductDetailViewController.swift in Sources */,
+				B5FBC81524182C3000C8928E /* ProductViewController.swift in Sources */,
+				B5FBC81624182C3000C8928E /* LPVLoginViewController.swift in Sources */,
+				B5FBC80E24182C3000C8928E /* Service.swift in Sources */,
+				B5FBC81D24182C3000C8928E /* PrimaryContentViewControllerExtension.swift in Sources */,
+				B5FBC81B24182C3000C8928E /* ProductCell.swift in Sources */,
+				B5FBC81324182C3000C8928E /* Product.swift in Sources */,
+				B5FBC81824182C3000C8928E /* PrimaryContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

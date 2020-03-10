@@ -60,8 +60,6 @@ extension PrimaryContentViewController {
         let urlString =  "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8"
 
         guard let url = URL(string: urlString) else { return }
-
-
         avPlayer = AVPlayer(url: url)
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
         avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
@@ -104,12 +102,27 @@ extension PrimaryContentViewController {
     }
     
     @objc func handleClose(_ sender: UIButton) {
-        
-        delegate?.didDismiss()
+        guard let window = UIApplication.shared.keyWindow else {
+            return
+        }
         let vc = self.initialVC
-        self.dismiss(animated: false, completion: {
-            UIApplication.shared.windows.first?.rootViewController = vc
-            UIApplication.shared.windows.first?.makeKeyAndVisible()
+
+        // Set the new rootViewController of the window.
+        // Calling "UIView.transition" below will animate the swap.
+        window.rootViewController = vc
+
+        // A mask of options indicating how you want to perform the animations.
+        let options: UIView.AnimationOptions = .transitionCrossDissolve
+
+        // The duration of the transition animation, measured in seconds.
+        let duration: TimeInterval = 0.3
+
+        // Creates a transition animation.
+        // Though `animations` is optional, the documentation tells us that it must not be nil. ¯\_(ツ)_/¯
+        UIView.transition(with: window, duration: duration, options: options, animations: {}, completion:
+        { completed in
+            
+            // maybe do something on completion here
         })
 
 
@@ -125,7 +138,6 @@ extension PrimaryContentViewController {
             if newStatus != oldStatus {
                 DispatchQueue.main.async {[weak self] in
                     if newStatus == .playing || newStatus == .paused {
-                        
                         self?.activityIndicatorView.stopAnimating()
                     }
                 }

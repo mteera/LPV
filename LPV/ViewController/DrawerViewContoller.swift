@@ -9,11 +9,13 @@
 import UIKit
 import Pulley
 
-class DrawerViewController: UIViewController {
+
+public class DrawerViewController: UIViewController {
     
-    fileprivate var cellId = "1234"
+    var cellId = "1234"
     
     var gripperTopConstraint: NSLayoutConstraint!
+    public var productDetailVC: UIViewController!
 
     lazy var topView: UIView = {
         let view = UIView()
@@ -48,7 +50,7 @@ class DrawerViewController: UIViewController {
     var products = [Product]()
 
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
         setupViews()
@@ -57,112 +59,9 @@ class DrawerViewController: UIViewController {
         fetchData()
     }
     
-    fileprivate func setupTable() {
-        view.addSubview(tableView)
-        tableView.anchor(top: topView.bottomAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor
-            , padding: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), size: CGSize())
 
-    }
-    
-    fileprivate func setupViews() {
-        // A view to indicate to usrs that the element can be dragged
-        view.addSubview(topView)
-        topView.backgroundColor = .white
-        topView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0), size: CGSize(width: view.frame.width, height: 30))
-        topView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        topView.addSubview(gripperView)
-        gripperView.layer.cornerRadius = 2.5
-        gripperView.backgroundColor = .systemGray5
-        gripperView.anchor(top: topView.topAnchor, leading: nil, bottom: topView.bottomAnchor, trailing: nil, padding: UIEdgeInsets(top: 10, left: 0, bottom: 5, right: 0), size: CGSize(width: 50, height: 5))
-        gripperView.centerXAnchor.constraint(equalTo: topView.centerXAnchor).isActive = true
-        gripperTopConstraint = topView.topAnchor.constraint(equalTo: view.topAnchor)
-        gripperTopConstraint.isActive = true
-        
-    }
-    
-    fileprivate func fetchData() {
-        Service.shared.fetchGenericJSONData(urlString: "https://api.live.dev.gedditlive.com/v1/test/product-list") { (product: ProductData?, error) in
-            if let error = error {
-                print("Failed to decode reviews:", error)
-                return
-            }
-            
-            guard let products = product?.data else { return }
-
-            self.products = products
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-
-            }
-
-        }
-    }
-    
-    
-    fileprivate func registerCells() {
-        tableView.register(ProductCell.self, forCellReuseIdentifier: cellId)
-
-    }
  
 }
 
-
-extension DrawerViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.products.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? ProductCell else { fatalError() }
-        
-        let product = self.products[indexPath.row]
-
-        cell.product = product
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-}
-
-extension DrawerViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let product = self.products[indexPath.row]
-        let vc = ProductDetailViewController()
-        vc.product = product
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        
-    }
-}
-
-
-extension DrawerViewController: PulleyDrawerViewControllerDelegate {
-
-    func collapsedDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat
-    {
-        // For devices with a bottom safe area, we want to make our drawer taller. Your implementation may not want to do that. In that case, disregard the bottomSafeArea value.
-        return 68.0 + (pulleyViewController?.currentDisplayMode == .drawer ? bottomSafeArea : 0.0)
-    }
-    
-    func partialRevealDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat
-    {
-        // For devices with a bottom safe area, we want to make our drawer taller. Your implementation may not want to do that. In that case, disregard the bottomSafeArea value.
-        return 464.0 + (pulleyViewController?.currentDisplayMode == .drawer ? bottomSafeArea : 0.0)
-    }
-    
-    func supportedDrawerPositions() -> [PulleyPosition] {
-        return PulleyPosition.all // You can specify the drawer positions you support. This is the same as: [.open, .partiallyRevealed, .collapsed, .closed]
-    }
-    
-
-}
 
 

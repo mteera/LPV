@@ -11,13 +11,13 @@ import Kingfisher
 
 
 class ProductDetailViewController: UIViewController {
+
     var product: Product? {
         didSet {
-
-            if let image = product?.attributes.image {
+            guard let product = product else { return }
+            if let image = product.attributes.image {
                 let url = URL(string: image)
                 productImageView.kf.setImage(with: url)
-                
             }
             
         }
@@ -36,6 +36,8 @@ class ProductDetailViewController: UIViewController {
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,12 +49,14 @@ class ProductDetailViewController: UIViewController {
         closeButton.anchor(view.safeAreaLayoutGuide.topAnchor, left: view.safeAreaLayoutGuide.leftAnchor, topConstant: 15, leftConstant: 15, widthConstant: 50, heightConstant: 50)
         closeButton.addTarget(self, action: #selector(handleDismiss(_:)), for: .touchUpInside)
 
+        // Callback function to listen for when product is selected from the SDK
+        LPVManager.shared.onSelected = { [weak self] (product) in
+            self?.product = product
+        }
     }
     
+
     @objc func handleDismiss(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: {
-            // Callback to inform when detail view is dismissed
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "detailDismiss"), object: nil)
-        })
+        self.dismiss(animated: true, completion: nil)
     }
 }

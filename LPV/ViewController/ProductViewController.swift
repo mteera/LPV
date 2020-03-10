@@ -12,11 +12,8 @@ import Pulley
 
 class ProductViewController: PulleyViewController {
 
-    override func viewDidLoad() {
+    override func viewDidLoad() {}
 
-    }
-
-    
 }
 
 

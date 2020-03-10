@@ -10,7 +10,7 @@ import Foundation
 
 // Structs over Class as this is a basic data object and does not require the use of inheritance.
 
-struct Product: Decodable {
+public class Product: Decodable {
     let id: String
     let type: String
     let attributes: Attributes

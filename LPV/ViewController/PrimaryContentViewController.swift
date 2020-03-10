@@ -11,13 +11,8 @@ import AVKit
 import Pulley
 
 
-protocol PrimaryContentViewControllerDelegate {
-    func didDismiss()
-}
-
 class PrimaryContentViewController: UIViewController, AVPlayerViewControllerDelegate {
     // Declare variables
-    var delegate: PrimaryContentViewControllerDelegate?
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
