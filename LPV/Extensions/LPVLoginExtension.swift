@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension LPVLoginViewController {
+extension LPVLoginController {
 
     func setupViews() {
         emailFieldWithLabel.titleLabel.text = "Email"

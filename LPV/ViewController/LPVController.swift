@@ -11,13 +11,12 @@ import AVKit
 import Pulley
 
 
-class PrimaryContentViewController: UIViewController, AVPlayerViewControllerDelegate {
+class LPVController: UIViewController, AVPlayerViewControllerDelegate {
     // Declare variables
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
     var drawerOpen = false
-    var initialVC: UIViewController!
     // Declare UI elements
     lazy var productListButton: UIButton = {
         let button = UIButton(type: .system)

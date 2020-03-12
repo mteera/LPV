@@ -9,7 +9,7 @@
 import UIKit
 import AVKit
 
-extension PrimaryContentViewController {
+extension LPVController {
     
     func setupProductAction() {
         view.addSubview(productListButtonContainer)
@@ -102,30 +102,8 @@ extension PrimaryContentViewController {
     }
     
     @objc func handleClose(_ sender: UIButton) {
-        guard let window = UIApplication.shared.keyWindow else {
-            return
-        }
-        let vc = self.initialVC
-
-        // Set the new rootViewController of the window.
-        // Calling "UIView.transition" below will animate the swap.
-        window.rootViewController = vc
-
-        // A mask of options indicating how you want to perform the animations.
-        let options: UIView.AnimationOptions = .transitionCrossDissolve
-
-        // The duration of the transition animation, measured in seconds.
-        let duration: TimeInterval = 0.3
-
-        // Creates a transition animation.
-        // Though `animations` is optional, the documentation tells us that it must not be nil. ¯\_(ツ)_/¯
-        UIView.transition(with: window, duration: duration, options: options, animations: {}, completion:
-        { completed in
-            
-            // maybe do something on completion here
-        })
-
-
+        // Dismiss view when root stack rerence is not provided
+        self.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: nil)
     }
     
     

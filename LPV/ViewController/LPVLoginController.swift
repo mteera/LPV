@@ -11,17 +11,15 @@ import Alamofire
 
 
 
-public class LPVLoginViewController: UIViewController {
+public class LPVLoginController: UIViewController {
     
     /// The current content view controller (shown behind the drawer).
-    public fileprivate(set) var initialVC: UIViewController!
     public fileprivate(set) var productDetailVC: UIViewController!
 
-    required public init(initialViewController: UIViewController, productDetailViewController: UIViewController) {
+    required public init(productDetailViewController: UIViewController) {
         super.init(nibName: nil, bundle: nil)
         
         ({
-            self.initialVC = initialViewController
             self.productDetailVC = productDetailViewController
         })()
     }
@@ -81,34 +79,14 @@ public class LPVLoginViewController: UIViewController {
             return
             }
             
-            let primaryVC = PrimaryContentViewController()
-            primaryVC.initialVC = self.initialVC
+            let primaryVC = LPVController()
             let drawerVC = DrawerViewController()
             drawerVC.productDetailVC = self.productDetailVC
 
-            guard let window = UIApplication.shared.keyWindow else {
-                return
-            }
-
             let vc = ProductViewController(contentViewController: primaryVC, drawerViewController: drawerVC)
-            // Set the new rootViewController of the window.
-            // Calling "UIView.transition" below will animate the swap.
-            window.rootViewController = vc
-
-            // A mask of options indicating how you want to perform the animations.
-            let options: UIView.AnimationOptions = .transitionCrossDissolve
-
-            // The duration of the transition animation, measured in seconds.
-            let duration: TimeInterval = 0.3
-
-            // Creates a transition animation.
-            // Though `animations` is optional, the documentation tells us that it must not be nil. ¯\_(ツ)_/¯
-            UIView.transition(with: window, duration: duration, options: options, animations: {}, completion:
-            { completed in
-                
-                // maybe do something on completion here
-            })
-
+            vc.modalPresentationStyle = .overFullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
